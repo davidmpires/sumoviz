@@ -21,12 +21,15 @@
             // Create a viz object and embed it in the container div.
         }
 	    
-	    function vizResize() {
-            var width = document.getElementById("resizeWidth").value;
-            var height = document.getElementById("resizeHeight").value;
+function vizResize() {
+    var width = document.getElementById("resizeWidth").value;
+    var height = document.getElementById("resizeHeight").value;
+    var sheet = viz.getWorkbook().getActiveSheet();
 
-			viz.setFrameSize(parseInt(width, 10), parseInt(height, 10));
-        }
+    sheet.changeSizeAsync(
+        {"behavior": "EXACTLY", "maxSize": { "height": height, "width": width }})
+        .then(viz.setFrameSize(parseInt(width, 10), parseInt(height, 10)));
+}
     </script>
 </head>
 
