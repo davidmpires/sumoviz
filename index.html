@@ -12,15 +12,31 @@
                 background-size:cover;
                 width:"1400"; 
                 height:"5030";
-            }            
+            }        
 
-                                 
-            twitter-share-button {
-            position: inherit;
+            #parent {
+            width: 200px;
+            height: 200px;
+            }
+            iframe {
+            width:100%;
+            height:100%;
+            border:0px;
             }
 
-
-
+            #parent > twitter-share-button {
+            opacity: 0.3;
+            position:relative;
+            float: right;
+            right:10px;
+            bottom:35px;
+            transition: 0.5s;
+            }
+            #parent > twitter-share-button {
+            opacity: 1;
+            }  
+                                 
+      
         </style>
 
 
@@ -59,10 +75,9 @@
 
     </head>
     
-    
+    <div id="outer">
     <center><iframe src="https://public.tableau.com/views/SumoViz/SumoWrestling?:display_count=y&:origin=viz_share_link?:showVizHome=no&:embed=true" width="1400" height="5000" frameborder='0'></iframe></center>
     
-    <div> 
         <a href="https://twitter.com/share" 
         class="twitter-share-button"
         data-text="Sumo Honbasho results since 1983 in @tableaupublic including Hakuho dominance. By @davidmpires"
@@ -70,6 +85,7 @@
         data-hashtags="sumo,tableau,japan"
         data-related="twitterapi,twitter">
         >Tweet</a>
+
     </div>
 
 </html>
