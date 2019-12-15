@@ -13,7 +13,12 @@
                 width:"1400"; 
                 height:"5000";
             }            
+
+            twitter-share-button{
+            position: relative;
+            }
         </style>
+
 
 
 
@@ -51,5 +56,15 @@
     </head>
         
     <center><iframe src="https://public.tableau.com/views/SumoViz/SumoWrestling?:display_count=y&:origin=viz_share_link?:showVizHome=no&:embed=true" width="1400" height="5000" frameborder='0'></iframe></center>
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    
+    <a href="https://twitter.com/share" 
+        class="twitter-share-button"
+        data-size="large"
+        data-text="SUMO: Honbasho Results between 1983-2019 in @tableaupublic including Hakuho Dominance"
+        data-url="https://dev.twitter.com/web/tweet-button"
+        data-hashtags="sumo,tableau,japan"
+        data-via="twitterdev"
+        data-related="twitterapi,twitter">
+        >Tweet</a>
+
 </html>
